@@ -24,4 +24,3 @@ The project retained all the features of the PyMARL project and provide image th
 This project only implemented LINDA_QMIX and LINDA_VDN additionally and please contact me if there is bugs in the project.
 
 QWQ
-# LINDA
