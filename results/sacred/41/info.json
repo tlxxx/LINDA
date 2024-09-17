@@ -1,0 +1,250 @@
+{
+  "battle_won_mean": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "battle_won_mean_T": [
+    47,
+    10086,
+    20116
+  ],
+  "dead_allies_mean": [
+    5.0,
+    5.0,
+    4.98019801980198
+  ],
+  "dead_allies_mean_T": [
+    47,
+    10086,
+    20116
+  ],
+  "dead_enemies_mean": [
+    0.0,
+    0.046632124352331605,
+    0.37623762376237624
+  ],
+  "dead_enemies_mean_T": [
+    47,
+    10086,
+    20116
+  ],
+  "ep_length_mean": [
+    47.0,
+    52.015544041450774,
+    49.65346534653465
+  ],
+  "ep_length_mean_T": [
+    47,
+    10086,
+    20116
+  ],
+  "episode": [
+    193,
+    394
+  ],
+  "episode_T": [
+    10007,
+    20029
+  ],
+  "epsilon": [
+    1.0,
+    0.809867,
+    0.6186130000000001
+  ],
+  "epsilon_T": [
+    47,
+    10086,
+    20116
+  ],
+  "grad_norm": [
+    {
+      "dtype": "float32",
+      "py/object": "numpy.ndarray",
+      "values": 2.07846999168396
+    },
+    {
+      "dtype": "float32",
+      "py/object": "numpy.ndarray",
+      "values": 0.35950663685798645
+    },
+    {
+      "dtype": "float32",
+      "py/object": "numpy.ndarray",
+      "values": 0.4962577819824219
+    }
+  ],
+  "grad_norm_T": [
+    1668,
+    11680,
+    21693
+  ],
+  "loss": [
+    0.11484621465206146,
+    0.016032252460718155,
+    0.022696632891893387
+  ],
+  "loss_T": [
+    1668,
+    11680,
+    21693
+  ],
+  "q_taken_mean": [
+    -0.009075450211120167,
+    0.060503343084111316,
+    0.09880548636713873
+  ],
+  "q_taken_mean_T": [
+    1668,
+    11680,
+    21693
+  ],
+  "return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 3.4558823529411757
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 4.179594635781773
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 5.9335687245195095
+    }
+  ],
+  "return_mean_T": [
+    47,
+    10086,
+    20116
+  ],
+  "return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.928919247311798
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 1.1938230770812515
+    }
+  ],
+  "return_std_T": [
+    47,
+    10086,
+    20116
+  ],
+  "target_mean": [
+    0.042796182975494604,
+    0.05068732406285633,
+    0.11207196905967151
+  ],
+  "target_mean_T": [
+    1668,
+    11680,
+    21693
+  ],
+  "td_error_abs": [
+    0.2650724269217439,
+    0.09774388799373752,
+    0.11118546198965161
+  ],
+  "td_error_abs_T": [
+    1668,
+    11680,
+    21693
+  ],
+  "test_battle_won_mean": [
+    0.0,
+    0.0,
+    0.4375
+  ],
+  "test_battle_won_mean_T": [
+    47,
+    10086,
+    20116
+  ],
+  "test_dead_allies_mean": [
+    5.0,
+    3.5625,
+    3.75
+  ],
+  "test_dead_allies_mean_T": [
+    47,
+    10086,
+    20116
+  ],
+  "test_dead_enemies_mean": [
+    0.15625,
+    1.03125,
+    3.75
+  ],
+  "test_dead_enemies_mean_T": [
+    47,
+    10086,
+    20116
+  ],
+  "test_ep_length_mean": [
+    49.8125,
+    99.5625,
+    54.59375
+  ],
+  "test_ep_length_mean_T": [
+    47,
+    10086,
+    20116
+  ],
+  "test_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 1.549785539215686
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 5.35378370098039
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 15.911305147058826
+    }
+  ],
+  "test_return_mean_T": [
+    47,
+    10086,
+    20116
+  ],
+  "test_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 1.005643041372693
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 2.6584604475990585
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 4.071640295602472
+    }
+  ],
+  "test_return_std_T": [
+    47,
+    10086,
+    20116
+  ]
+}

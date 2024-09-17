@@ -1,0 +1,146 @@
+{
+  "battle_won_mean": [
+    0.0
+  ],
+  "battle_won_mean_T": [
+    29
+  ],
+  "dead_allies_mean": [
+    8.0
+  ],
+  "dead_allies_mean_T": [
+    29
+  ],
+  "dead_enemies_mean": [
+    0.0
+  ],
+  "dead_enemies_mean_T": [
+    29
+  ],
+  "ep_length_mean": [
+    29.0
+  ],
+  "ep_length_mean_T": [
+    29
+  ],
+  "episode": [
+    12,
+    26,
+    40,
+    52,
+    64,
+    75
+  ],
+  "episode_T": [
+    430,
+    846,
+    1266,
+    1697,
+    2121,
+    2563
+  ],
+  "epsilon": [
+    1.0
+  ],
+  "epsilon_T": [
+    29
+  ],
+  "grad_norm": [
+    {
+      "dtype": "float32",
+      "py/object": "numpy.ndarray",
+      "values": 1.326432704925537
+    }
+  ],
+  "grad_norm_T": [
+    1046
+  ],
+  "loss": [
+    0.21926705539226532
+  ],
+  "loss_T": [
+    1046
+  ],
+  "q_taken_mean": [
+    0.01539434028173268
+  ],
+  "q_taken_mean_T": [
+    1046
+  ],
+  "return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 2.0625
+    }
+  ],
+  "return_mean_T": [
+    29
+  ],
+  "return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "return_std_T": [
+    29
+  ],
+  "target_mean": [
+    0.036766916570426404
+  ],
+  "target_mean_T": [
+    1046
+  ],
+  "td_error_abs": [
+    0.3579725918304852
+  ],
+  "td_error_abs_T": [
+    1046
+  ],
+  "test_battle_won_mean": [
+    0.0
+  ],
+  "test_battle_won_mean_T": [
+    29
+  ],
+  "test_dead_allies_mean": [
+    7.25
+  ],
+  "test_dead_allies_mean_T": [
+    29
+  ],
+  "test_dead_enemies_mean": [
+    0.0
+  ],
+  "test_dead_enemies_mean_T": [
+    29
+  ],
+  "test_ep_length_mean": [
+    84.5625
+  ],
+  "test_ep_length_mean_T": [
+    29
+  ],
+  "test_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 1.705078125
+    }
+  ],
+  "test_return_mean_T": [
+    29
+  ],
+  "test_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.46959152977240165
+    }
+  ],
+  "test_return_std_T": [
+    29
+  ]
+}

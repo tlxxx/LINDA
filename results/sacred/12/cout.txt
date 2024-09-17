@@ -1,0 +1,177 @@
+[INFO 20:38:42] pymarl Running command 'my_main'
+[INFO 20:38:42] pymarl Started run with ID "12"
+[DEBUG 20:38:42] pymarl Starting Heartbeat
+[DEBUG 20:38:42] my_main Started
+[INFO 20:38:42] my_main Experiment Parameters:
+[INFO 20:38:42] my_main 
+
+{   'action_selector': 'epsilon_greedy',
+    'agent': 'rnn',
+    'agent_output_type': 'q',
+    'batch_size': 32,
+    'batch_size_run': 1,
+    'buffer_cpu_only': True,
+    'buffer_size': 5000,
+    'checkpoint_path': '',
+    'critic_lr': 0.0005,
+    'double_q': True,
+    'env': 'sc2',
+    'env_args': {   'continuing_episode': False,
+                    'debug': False,
+                    'difficulty': '7',
+                    'game_version': None,
+                    'heuristic_ai': False,
+                    'heuristic_rest': False,
+                    'map_name': '2s3z',
+                    'move_amount': 2,
+                    'obs_all_health': True,
+                    'obs_instead_of_state': False,
+                    'obs_last_action': False,
+                    'obs_own_health': True,
+                    'obs_pathing_grid': False,
+                    'obs_terrain_height': False,
+                    'obs_timestep_number': False,
+                    'replay_dir': '',
+                    'replay_prefix': '',
+                    'reward_death_value': 10,
+                    'reward_defeat': 0,
+                    'reward_negative_scale': 0.5,
+                    'reward_only_positive': True,
+                    'reward_scale': True,
+                    'reward_scale_rate': 20,
+                    'reward_sparse': False,
+                    'reward_win': 200,
+                    'seed': 555152642,
+                    'state_last_action': True,
+                    'state_timestep_number': False,
+                    'step_mul': 8},
+    'epsilon_anneal_time': 50000,
+    'epsilon_finish': 0.05,
+    'epsilon_start': 1.0,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hypernet_embed': 64,
+    'hypernet_layers': 2,
+    'label': 'default_label',
+    'learner': 'q_learner',
+    'learner_log_interval': 10000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 10000,
+    'lr': 0.0005,
+    'mac': 'basic_mac',
+    'mixer': 'qmix',
+    'mixing_embed_dim': 32,
+    'name': 'qmix',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'runner': 'episode',
+    'runner_log_interval': 10000,
+    'save_model': False,
+    'save_model_interval': 2000000,
+    'save_replay': False,
+    'seed': 555152642,
+    't_max': 2050000,
+    'target_update_interval': 200,
+    'test_greedy': True,
+    'test_interval': 10000,
+    'test_nepisode': 32,
+    'use_cuda': True,
+    'use_tensorboard': False}
+
+[INFO 20:38:44] my_main Beginning training for 2050000 timesteps
+[INFO 20:38:44] absl Launching SC2: /home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 38045 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-97h_39gi/
+[INFO 20:38:44] absl Connecting to: ws://127.0.0.1:38045/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 38045 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-97h_39gi/'
+Starting up...
+Startup Phase 1 complete
+[INFO 20:38:45] absl Connecting to: ws://127.0.0.1:38045/sc2api, attempt: 1, running: True
+Startup Phase 2 complete
+Creating stub renderer...
+Listening on: 127.0.0.1:38045
+Startup Phase 3 complete. Ready for commands.
+[INFO 20:38:46] absl Connecting to: ws://127.0.0.1:38045/sc2api, attempt: 2, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Game has started.
+Sending ResponseJoinGame
+/home/amax/lgh/LINDA/pymarl-master/src/components/episode_buffer.py:103: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:278.)
+  v = th.tensor(v, dtype=dtype, device=self.device)
+/home/amax/lgh/LINDA/pymarl-master/src/components/episode_buffer.py:103: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+[INFO 20:38:53] my_main t_env: 53 / 2050000
+[INFO 20:38:53] my_main Estimated time left: 30 minutes, 50 seconds. Time passed: 9 seconds
+114514           [(53, 0.0)] <class 'float'>
+114514           [(53, 5.0)] <class 'float'>
+114514           [(53, 0.0)] <class 'float'>
+114514           [(53, 53.0)] <class 'float'>
+114514           [(53, 1.0)] <class 'float'>
+114514           [(53, 3.245098039215685)] <class 'numpy.float64'>
+114514           [(53, 0.0)] <class 'numpy.float64'>
+114514           [(53, 0.0)] <class 'float'>
+114514           [(53, 4.15625)] <class 'float'>
+114514           [(53, 0.28125)] <class 'float'>
+114514           [(53, 96.96875)] <class 'float'>
+114514           [(53, 1.6482843137254894)] <class 'numpy.float64'>
+114514           [(53, 1.4499282782560992)] <class 'numpy.float64'>
+[INFO 20:39:52] my_main Recent Stats | t_env:        430 | Episode:        8
+battle_won_mean:           0.0000	dead_allies_mean:          5.0000	dead_enemies_mean:         0.0000	ep_length_mean:           53.0000
+epsilon:                   1.0000	return_mean:               3.2451	return_std:                0.0000	test_battle_won_mean:      0.0000
+test_dead_allies_mean:     4.1562	test_dead_enemies_mean:    0.2812	test_ep_length_mean:      96.9688	test_return_mean:          1.6483
+test_return_std:           1.4499	
+114514           [(53, 0.0)] <class 'float'>
+114514           [(53, 5.0)] <class 'float'>
+114514           [(53, 0.0)] <class 'float'>
+114514           [(53, 53.0)] <class 'float'>
+114514           [(53, 1.0)] <class 'float'>
+114514           [(53, 3.245098039215685)] <class 'numpy.float64'>
+114514           [(53, 0.0)] <class 'numpy.float64'>
+114514           [(53, 0.0)] <class 'float'>
+114514           [(53, 4.15625)] <class 'float'>
+114514           [(53, 0.28125)] <class 'float'>
+114514           [(53, 96.96875)] <class 'float'>
+114514           [(53, 1.6482843137254894)] <class 'numpy.float64'>
+114514           [(53, 1.4499282782560992)] <class 'numpy.float64'>
+[INFO 20:39:59] my_main Recent Stats | t_env:        833 | Episode:       16
+battle_won_mean:           0.0000	dead_allies_mean:          5.0000	dead_enemies_mean:         0.0000	ep_length_mean:           53.0000
+epsilon:                   1.0000	return_mean:               3.2451	return_std:                0.0000	test_battle_won_mean:      0.0000
+test_dead_allies_mean:     4.1562	test_dead_enemies_mean:    0.2812	test_ep_length_mean:      96.9688	test_return_mean:          1.6483
+test_return_std:           1.4499	
+114514           [(53, 0.0)] <class 'float'>
+114514           [(53, 5.0)] <class 'float'>
+114514           [(53, 0.0)] <class 'float'>
+114514           [(53, 53.0)] <class 'float'>
+114514           [(53, 1.0)] <class 'float'>
+114514           [(53, 3.245098039215685)] <class 'numpy.float64'>
+114514           [(53, 0.0)] <class 'numpy.float64'>
+114514           [(53, 0.0)] <class 'float'>
+114514           [(53, 4.15625)] <class 'float'>
+114514           [(53, 0.28125)] <class 'float'>
+114514           [(53, 96.96875)] <class 'float'>
+114514           [(53, 1.6482843137254894)] <class 'numpy.float64'>
+114514           [(53, 1.4499282782560992)] <class 'numpy.float64'>
+[INFO 20:40:07] my_main Recent Stats | t_env:       1267 | Episode:       24
+battle_won_mean:           0.0000	dead_allies_mean:          5.0000	dead_enemies_mean:         0.0000	ep_length_mean:           53.0000
+epsilon:                   1.0000	return_mean:               3.2451	return_std:                0.0000	test_battle_won_mean:      0.0000
+test_dead_allies_mean:     4.1562	test_dead_enemies_mean:    0.2812	test_ep_length_mean:      96.9688	test_return_mean:          1.6483
+test_return_std:           1.4499	

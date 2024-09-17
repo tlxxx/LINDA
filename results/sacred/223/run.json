@@ -1,0 +1,92 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/home/amax/lgh/LINDA/pymarl-master/src",
+    "dependencies": [
+      "numpy==1.24.4",
+      "PyYAML==3.13",
+      "sacred==0.8.6",
+      "torch==2.4.1"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_b7323ae4bfd95dceefc78ad124a4154e.py"
+      ],
+      [
+        "run.py",
+        "_sources/run_8f7e88f68998512583aee6e3d82ed879.py"
+      ],
+      [
+        "utils/logging.py",
+        "_sources/logging_17bd0d742d3652503a996eb43349da26.py"
+      ]
+    ]
+  },
+  "heartbeat": "2024-09-17T12:45:11.851307",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Xeon(R) Silver 4116 CPU @ 2.10GHz",
+    "gpus": {
+      "driver_version": "545.29.06",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce RTX 2080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11264
+        }
+      ]
+    },
+    "hostname": "pop-os",
+    "os": [
+      "Linux",
+      "Linux-6.6.6-76060606-generic-x86_64-with-glibc2.17"
+    ],
+    "python_version": "3.8.19"
+  },
+  "meta": {
+    "command": "my_main",
+    "config_updates": {
+      "env_args": {
+        "map_name": "5m_vs_6m"
+      }
+    },
+    "named_configs": [],
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--id": null,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "env_args.map_name=5m_vs_6m"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2024-09-17T12:29:00.618910",
+  "status": "RUNNING"
+}

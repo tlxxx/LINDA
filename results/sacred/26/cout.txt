@@ -1,0 +1,491 @@
+[INFO 14:11:59] pymarl Running command 'my_main'
+[INFO 14:11:59] pymarl Started run with ID "26"
+[DEBUG 14:11:59] pymarl Starting Heartbeat
+[DEBUG 14:11:59] my_main Started
+[INFO 14:11:59] my_main Experiment Parameters:
+[INFO 14:11:59] my_main 
+
+{   'action_selector': 'multinomial',
+    'agent': 'rnn',
+    'agent_output_type': 'pi_logits',
+    'batch_size': 8,
+    'batch_size_run': 8,
+    'buffer_cpu_only': True,
+    'buffer_size': 8,
+    'checkpoint_path': '',
+    'critic_baseline_fn': 'coma',
+    'critic_lr': 0.0005,
+    'critic_q_fn': 'coma',
+    'critic_train_mode': 'seq',
+    'critic_train_reps': 1,
+    'env': 'sc2',
+    'env_args': {   'continuing_episode': False,
+                    'debug': False,
+                    'difficulty': '7',
+                    'game_version': None,
+                    'heuristic_ai': False,
+                    'heuristic_rest': False,
+                    'map_name': '8m',
+                    'move_amount': 2,
+                    'obs_all_health': True,
+                    'obs_instead_of_state': False,
+                    'obs_last_action': False,
+                    'obs_own_health': True,
+                    'obs_pathing_grid': False,
+                    'obs_terrain_height': False,
+                    'obs_timestep_number': False,
+                    'replay_dir': '',
+                    'replay_prefix': '',
+                    'reward_death_value': 10,
+                    'reward_defeat': 0,
+                    'reward_negative_scale': 0.5,
+                    'reward_only_positive': True,
+                    'reward_scale': True,
+                    'reward_scale_rate': 20,
+                    'reward_sparse': False,
+                    'reward_win': 200,
+                    'seed': 996582250,
+                    'state_last_action': False,
+                    'state_timestep_number': False,
+                    'step_mul': 8},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.01,
+    'epsilon_start': 0.5,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'label': 'default_label',
+    'learner': 'coma_learner',
+    'learner_log_interval': 10000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 10000,
+    'lr': 0.0005,
+    'mac': 'basic_mac',
+    'mask_before_softmax': False,
+    'name': 'coma',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'q_nstep': 0,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'runner': 'parallel',
+    'runner_log_interval': 10000,
+    'save_model': False,
+    'save_model_interval': 2000000,
+    'save_replay': False,
+    'seed': 996582250,
+    't_max': 2050000,
+    'target_update_interval': 200,
+    'td_lambda': 0.8,
+    'test_greedy': True,
+    'test_interval': 10000,
+    'test_nepisode': 32,
+    'use_cuda': True,
+    'use_tensorboard': False}
+
+[INFO 14:12:01] my_main Beginning training for 2050000 timesteps
+[INFO 14:12:01] absl Launching SC2: /home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 43323 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-y262uedd/
+[INFO 14:12:01] absl Launching SC2: /home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 45865 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-iwh9nzrr/
+[INFO 14:12:01] absl Launching SC2: /home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 45343 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-gpje_93t/
+[INFO 14:12:01] absl Launching SC2: /home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 40921 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-tngjg_hj/
+[INFO 14:12:01] absl Launching SC2: /home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 43759 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-aldst773/
+[INFO 14:12:01] absl Launching SC2: /home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 36943 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-skmlz_qz/
+[INFO 14:12:01] absl Launching SC2: /home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 41679 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-nyucaljd/
+[INFO 14:12:01] absl Launching SC2: /home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 41125 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-jx06ip3_/
+[INFO 14:12:01] absl Connecting to: ws://127.0.0.1:43323/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 43323 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-y262uedd/'
+[INFO 14:12:01] absl Connecting to: ws://127.0.0.1:45865/sc2api, attempt: 0, running: True
+[INFO 14:12:01] absl Connecting to: ws://127.0.0.1:40921/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 45865 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-iwh9nzrr/'
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 40921 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-tngjg_hj/'
+[INFO 14:12:01] absl Connecting to: ws://127.0.0.1:36943/sc2api, attempt: 0, running: True
+[INFO 14:12:01] absl Connecting to: ws://127.0.0.1:41679/sc2api, attempt: 0, running: True
+[INFO 14:12:01] absl Connecting to: ws://127.0.0.1:43759/sc2api, attempt: 0, running: True
+[INFO 14:12:01] absl Connecting to: ws://127.0.0.1:45343/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 36943 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-skmlz_qz/'
+Command Line: '"/home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 43759 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-aldst773/'
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 41679 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-nyucaljd/'
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+[INFO 14:12:01] absl Connecting to: ws://127.0.0.1:41125/sc2api, attempt: 0, running: True
+Command Line: '"/home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 45343 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-gpje_93t/'
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 41125 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-jx06ip3_/'
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+[INFO 14:12:02] absl Connecting to: ws://127.0.0.1:43323/sc2api, attempt: 1, running: True
+[INFO 14:12:02] absl Connecting to: ws://127.0.0.1:45865/sc2api, attempt: 1, running: True
+[INFO 14:12:02] absl Connecting to: ws://127.0.0.1:40921/sc2api, attempt: 1, running: True
+[INFO 14:12:02] absl Connecting to: ws://127.0.0.1:41679/sc2api, attempt: 1, running: True
+[INFO 14:12:02] absl Connecting to: ws://127.0.0.1:45343/sc2api, attempt: 1, running: True
+[INFO 14:12:02] absl Connecting to: ws://127.0.0.1:43759/sc2api, attempt: 1, running: True
+[INFO 14:12:02] absl Connecting to: ws://127.0.0.1:36943/sc2api, attempt: 1, running: True
+[INFO 14:12:02] absl Connecting to: ws://127.0.0.1:41125/sc2api, attempt: 1, running: True
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Listening on: 127.0.0.1:43323
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:45343
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:40921
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:41125
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:41679
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:43759
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:36943
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:45865
+Startup Phase 3 complete. Ready for commands.
+[INFO 14:12:03] absl Connecting to: ws://127.0.0.1:43323/sc2api, attempt: 2, running: True
+[INFO 14:12:03] absl Connecting to: ws://127.0.0.1:45865/sc2api, attempt: 2, running: True
+[INFO 14:12:03] absl Connecting to: ws://127.0.0.1:40921/sc2api, attempt: 2, running: True
+[INFO 14:12:03] absl Connecting to: ws://127.0.0.1:41679/sc2api, attempt: 2, running: True
+[INFO 14:12:03] absl Connecting to: ws://127.0.0.1:45343/sc2api, attempt: 2, running: True
+[INFO 14:12:03] absl Connecting to: ws://127.0.0.1:43759/sc2api, attempt: 2, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+[INFO 14:12:03] absl Connecting to: ws://127.0.0.1:36943/sc2api, attempt: 2, running: True
+[INFO 14:12:03] absl Connecting to: ws://127.0.0.1:41125/sc2api, attempt: 2, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 5
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Requesting to join a single player game
+Configuring interface options
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: raw interface enabled
+Configure: score interface disabled
+Configure: feature layer interface disabled
+Configure: render interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Entering load game phase.
+Launching next game.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Game has started.
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Game has started.
+Game has started.
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+/home/amax/lgh/LINDA/pymarl-master/src/components/episode_buffer.py:103: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:278.)
+  v = th.tensor(v, dtype=dtype, device=self.device)
+/home/amax/lgh/LINDA/pymarl-master/src/components/episode_buffer.py:103: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+[INFO 14:12:13] my_main t_env: 290 / 2050000
+[INFO 14:12:13] my_main Estimated time left: 41 minutes, 48 seconds. Time passed: 12 seconds
+/home/amax/anaconda3/envs/lgh_pymarl/lib/python3.8/site-packages/jsonpickle/ext/numpy.py:305: UserWarning: ndarray is defined by reference to an object we do not know how to serialize. A deep copy is serialized instead, breaking memory aliasing.
+  warnings.warn(msg)
+[INFO 14:12:30] my_main Updated target network
+[INFO 14:12:39] my_main Updated target network
+[INFO 14:12:46] my_main Updated target network
+[INFO 14:12:54] my_main Updated target network
+[INFO 14:13:02] my_main Updated target network
+[INFO 14:13:09] my_main Updated target network
+[INFO 14:13:17] my_main Updated target network
+[INFO 14:13:26] my_main Updated target network
+[INFO 14:13:34] my_main Updated target network
+114514           [(290, 0.0004970707770051627)] <class 'float'> advantage_mean
+114514           [(290, array(0.00434042, dtype=float32))] <class 'numpy.ndarray'> agent_grad_norm
+114514           [(290, 0.0)] <class 'float'> battle_won_mean
+114514           [(290, 0.0008283796487376094)] <class 'float'> coma_loss
+114514           [(290, 0.11403829322885127)] <class 'numpy.float64'> critic_grad_norm
+114514           [(290, 0.013947745714094321)] <class 'float'> critic_loss
+114514           [(290, 8.0)] <class 'float'> dead_allies_mean
+114514           [(290, 0.0)] <class 'float'> dead_enemies_mean
+114514           [(290, 36.25)] <class 'float'> ep_length_mean
+114514           [(290, 0.5)] <class 'float'> epsilon
+114514           [(290, 0.5873118433459051)] <class 'float'> pi_max
+114514           [(290, 0.12840421618101128)] <class 'float'> q_taken_mean
+114514           [(290, 2.25)] <class 'numpy.float64'> return_mean
+114514           [(290, 0.350780380010057)] <class 'numpy.float64'> return_std
+114514           [(290, 0.1371121444244017)] <class 'float'> target_mean
+114514           [(290, 0.06140979717729997)] <class 'float'> td_error_abs
+114514           [(290, 0.0)] <class 'float'> test_battle_won_mean
+114514           [(290, 6.53125)] <class 'float'> test_dead_allies_mean
+114514           [(290, 0.53125)] <class 'float'> test_dead_enemies_mean
+114514           [(290, 84.9375)] <class 'float'> test_ep_length_mean
+114514           [(290, 1.9267578125)] <class 'numpy.float64'> test_return_mean
+114514           [(290, 1.2776628848035736)] <class 'numpy.float64'> test_return_std
+[INFO 14:13:39] my_main Recent Stats | t_env:      10051 | Episode:      408
+advantage_mean:            0.0005	agent_grad_norm:           0.0043	battle_won_mean:           0.0000	coma_loss:                 0.0008
+critic_grad_norm:          0.1140	critic_loss:               0.0139	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000
+ep_length_mean:           36.2500	epsilon:                   0.5000	pi_max:                    0.5873	q_taken_mean:              0.1284
+return_mean:               2.2500	return_std:                0.3508	target_mean:               0.1371	td_error_abs:              0.0614
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     6.5312	test_dead_enemies_mean:    0.5312	test_ep_length_mean:      84.9375
+test_return_mean:          1.9268	test_return_std:           1.2777	
+[INFO 14:13:44] my_main Updated target network
+[INFO 14:13:44] my_main t_env: 10486 / 2050000
+[INFO 14:13:44] my_main Estimated time left: 5 hours, 2 minutes, 14 seconds. Time passed: 1 minutes, 43 seconds
+[INFO 14:14:02] my_main Updated target network
+[INFO 14:14:11] my_main Updated target network
+[INFO 14:14:20] my_main Updated target network
+[INFO 14:14:30] my_main Updated target network
+[INFO 14:14:40] my_main Updated target network
+[INFO 14:14:49] my_main Updated target network
+114514           [(290, 0.0004970707770051627), (10486, 0.0001557911244722513)] <class 'float'> advantage_mean
+114514           [(290, array(0.00434042, dtype=float32)), (10486, array(0.02713489, dtype=float32))] <class 'numpy.ndarray'> agent_grad_norm
+114514           [(290, 0.0), (10486, 0.0)] <class 'float'> battle_won_mean
+114514           [(290, 0.0008283796487376094), (10486, -0.017045119777321815)] <class 'float'> coma_loss
+114514           [(290, 0.11403829322885127), (10486, 0.566321339289425)] <class 'numpy.float64'> critic_grad_norm
+114514           [(290, 0.013947745714094321), (10486, 0.026486936647665972)] <class 'float'> critic_loss
+114514           [(290, 8.0), (10486, 7.983173076923077)] <class 'float'> dead_allies_mean
+114514           [(290, 0.0), (10486, 0.32211538461538464)] <class 'float'> dead_enemies_mean
+114514           [(290, 36.25), (10486, 24.509615384615383)] <class 'float'> ep_length_mean
+114514           [(10486, 0.4498926)] <class 'float'> epsilon
+114514           [(290, 0.5873118433459051), (10486, 0.7418718778170073)] <class 'float'> pi_max
+114514           [(290, 0.12840421618101128), (10486, 0.4439781082152493)] <class 'float'> q_taken_mean
+114514           [(290, 2.25), (10486, 3.444110576923077)] <class 'numpy.float64'> return_mean
+114514           [(290, 0.350780380010057), (10486, 1.191119413587146)] <class 'numpy.float64'> return_std
+114514           [(290, 0.1371121444244017), (10486, 0.44783595637107887)] <class 'float'> target_mean
+114514           [(290, 0.06140979717729997), (10486, 0.05911539905963258)] <class 'float'> td_error_abs
+114514           [(290, 0.0), (10486, 0.0)] <class 'float'> test_battle_won_mean
+114514           [(290, 6.53125), (10486, 7.625)] <class 'float'> test_dead_allies_mean
+114514           [(290, 0.53125), (10486, 1.0)] <class 'float'> test_dead_enemies_mean
+114514           [(290, 84.9375), (10486, 58.8125)] <class 'float'> test_ep_length_mean
+114514           [(290, 1.9267578125), (10486, 2.509765625)] <class 'numpy.float64'> test_return_mean
+114514           [(290, 1.2776628848035736), (10486, 0.36830262023010285)] <class 'numpy.float64'> test_return_std
+[INFO 14:14:50] my_main Recent Stats | t_env:      20070 | Episode:      912
+advantage_mean:            0.0003	agent_grad_norm:           0.0157	battle_won_mean:           0.0000	coma_loss:                -0.0081
+critic_grad_norm:          0.3402	critic_loss:               0.0202	dead_allies_mean:          7.9916	dead_enemies_mean:         0.1611
+ep_length_mean:           30.3798	epsilon:                   0.4499	pi_max:                    0.6646	q_taken_mean:              0.2862
+return_mean:               2.8471	return_std:                0.7709	target_mean:               0.2925	td_error_abs:              0.0603
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.0781	test_dead_enemies_mean:    0.7656	test_ep_length_mean:      71.8750
+test_return_mean:          2.2183	test_return_std:           0.8230	
+[INFO 14:14:53] my_main t_env: 20535 / 2050000
+[INFO 14:14:53] my_main Estimated time left: 3 hours, 53 minutes, 7 seconds. Time passed: 2 minutes, 52 seconds
+[INFO 14:15:02] my_main Updated target network
+[INFO 14:15:11] my_main Updated target network
+[INFO 14:15:21] my_main Updated target network
+[INFO 14:15:31] my_main Updated target network
+[INFO 14:15:40] my_main Updated target network
+[INFO 14:15:50] my_main Updated target network
+114514           [(290, 0.0004970707770051627), (10486, 0.0001557911244722513), (20535, -1.3049838966444919e-05)] <class 'float'> advantage_mean
+114514           [(290, array(0.00434042, dtype=float32)), (10486, array(0.02713489, dtype=float32)), (20535, array(0.02242601, dtype=float32))] <class 'numpy.ndarray'> agent_grad_norm
+114514           [(290, 0.0), (10486, 0.0), (20535, 0.0)] <class 'float'> battle_won_mean
+114514           [(290, 0.0008283796487376094), (10486, -0.017045119777321815), (20535, -0.026259275153279305)] <class 'float'> coma_loss
+114514           [(290, 0.11403829322885127), (10486, 0.566321339289425), (20535, 3.323625302740506)] <class 'numpy.float64'> critic_grad_norm
+114514           [(290, 0.013947745714094321), (10486, 0.026486936647665972), (20535, 0.1236459334336576)] <class 'float'> critic_loss
+114514           [(290, 8.0), (10486, 7.983173076923077), (20535, 8.0)] <class 'float'> dead_allies_mean
+114514           [(290, 0.0), (10486, 0.32211538461538464), (20535, 0.759765625)] <class 'float'> dead_enemies_mean
+114514           [(290, 36.25), (10486, 24.509615384615383), (20535, 19.626953125)] <class 'float'> ep_length_mean
+114514           [(20535, 0.4001233)] <class 'float'> epsilon
+114514           [(290, 0.5873118433459051), (10486, 0.7418718778170073), (20535, 0.6402613991185239)] <class 'float'> pi_max
+114514           [(290, 0.12840421618101128), (10486, 0.4439781082152493), (20535, 2.916181801212212)] <class 'float'> q_taken_mean
+114514           [(290, 2.25), (10486, 3.444110576923077), (20535, 5.34552001953125)] <class 'numpy.float64'> return_mean
+114514           [(290, 0.350780380010057), (10486, 1.191119413587146), (20535, 1.0408043119088648)] <class 'numpy.float64'> return_std
+114514           [(290, 0.1371121444244017), (10486, 0.44783595637107887), (20535, 2.902469824112597)] <class 'float'> target_mean
+114514           [(290, 0.06140979717729997), (10486, 0.05911539905963258), (20535, 0.2665616178086826)] <class 'float'> td_error_abs
+114514           [(290, 0.0), (10486, 0.0), (20535, 0.0)] <class 'float'> test_battle_won_mean
+114514           [(290, 6.53125), (10486, 7.625), (20535, 8.0)] <class 'float'> test_dead_allies_mean
+114514           [(290, 0.53125), (10486, 1.0), (20535, 3.71875)] <class 'float'> test_dead_enemies_mean
+114514           [(290, 84.9375), (10486, 58.8125), (20535, 23.625)] <class 'float'> test_ep_length_mean
+114514           [(290, 1.9267578125), (10486, 2.509765625), (20535, 7.6689453125)] <class 'numpy.float64'> test_return_mean
+114514           [(290, 1.2776628848035736), (10486, 0.36830262023010285), (20535, 0.4034503422354508)] <class 'numpy.float64'> test_return_std
+[INFO 14:15:55] my_main Recent Stats | t_env:      30233 | Episode:     1416
+advantage_mean:            0.0002	agent_grad_norm:           0.0180	battle_won_mean:           0.0000	coma_loss:                -0.0142
+critic_grad_norm:          1.3347	critic_loss:               0.0547	dead_allies_mean:          7.9944	dead_enemies_mean:         0.3606
+ep_length_mean:           26.7955	epsilon:                   0.4001	pi_max:                    0.6565	q_taken_mean:              1.1629
+return_mean:               3.6799	return_std:                0.8609	target_mean:               1.1625	td_error_abs:              0.1290
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.3854	test_dead_enemies_mean:    1.7500	test_ep_length_mean:      55.7917
+test_return_mean:          4.0352	test_return_std:           0.6831	
+[INFO 14:15:57] my_main t_env: 30555 / 2050000
+[INFO 14:15:57] my_main Estimated time left: 3 hours, 33 minutes, 2 seconds. Time passed: 3 minutes, 55 seconds
+[INFO 14:16:04] my_main Updated target network
+[INFO 14:16:13] my_main Updated target network
+[INFO 14:16:23] my_main Updated target network
+[INFO 14:16:32] my_main Updated target network
+[INFO 14:16:41] my_main Updated target network
+[INFO 14:16:51] my_main Updated target network
+[INFO 14:17:00] my_main Updated target network
+114514           [(290, 0.0004970707770051627), (10486, 0.0001557911244722513), (20535, -1.3049838966444919e-05), (30555, 0.0024053788766628358)] <class 'float'> advantage_mean
+114514           [(290, array(0.00434042, dtype=float32)), (10486, array(0.02713489, dtype=float32)), (20535, array(0.02242601, dtype=float32)), (30555, array(0.02887924, dtype=float32))] <class 'numpy.ndarray'> agent_grad_norm
+114514           [(290, 0.0), (10486, 0.0), (20535, 0.0), (30555, 0.0)] <class 'float'> battle_won_mean
+114514           [(290, 0.0008283796487376094), (10486, -0.017045119777321815), (20535, -0.026259275153279305), (30555, -0.0014218735741451383)] <class 'float'> coma_loss
+114514           [(290, 0.11403829322885127), (10486, 0.566321339289425), (20535, 3.323625302740506), (30555, 3.225269027231705)] <class 'numpy.float64'> critic_grad_norm
+114514           [(290, 0.013947745714094321), (10486, 0.026486936647665972), (20535, 0.1236459334336576), (30555, 0.11119376060863335)] <class 'float'> critic_loss
+114514           [(290, 8.0), (10486, 7.983173076923077), (20535, 8.0), (30555, 8.0)] <class 'float'> dead_allies_mean
+114514           [(290, 0.0), (10486, 0.32211538461538464), (20535, 0.759765625), (30555, 1.5262096774193548)] <class 'float'> dead_enemies_mean
+114514           [(290, 36.25), (10486, 24.509615384615383), (20535, 19.626953125), (30555, 20.201612903225808)] <class 'float'> ep_length_mean
+114514           [(30555, 0.3510841)] <class 'float'> epsilon
+114514           [(290, 0.5873118433459051), (10486, 0.7418718778170073), (20535, 0.6402613991185239), (30555, 0.65874136948004)] <class 'float'> pi_max
+114514           [(290, 0.12840421618101128), (10486, 0.4439781082152493), (20535, 2.916181801212212), (30555, 3.138512562250807)] <class 'float'> q_taken_mean
+114514           [(290, 2.25), (10486, 3.444110576923077), (20535, 5.34552001953125), (30555, 6.188319052419355)] <class 'numpy.float64'> return_mean
+114514           [(290, 0.350780380010057), (10486, 1.191119413587146), (20535, 1.0408043119088648), (30555, 0.9659561724069045)] <class 'numpy.float64'> return_std
+114514           [(290, 0.1371121444244017), (10486, 0.44783595637107887), (20535, 2.902469824112597), (30555, 3.1758727356791496)] <class 'float'> target_mean
+114514           [(290, 0.06140979717729997), (10486, 0.05911539905963258), (20535, 0.2665616178086826), (30555, 0.24858715988340832)] <class 'float'> td_error_abs
+114514           [(290, 0.0), (10486, 0.0), (20535, 0.0), (30555, 0.0)] <class 'float'> test_battle_won_mean
+114514           [(290, 6.53125), (10486, 7.625), (20535, 8.0), (30555, 7.96875)] <class 'float'> test_dead_allies_mean
+114514           [(290, 0.53125), (10486, 1.0), (20535, 3.71875), (30555, 5.6875)] <class 'float'> test_dead_enemies_mean
+114514           [(290, 84.9375), (10486, 58.8125), (20535, 23.625), (30555, 32.34375)] <class 'float'> test_ep_length_mean
+114514           [(290, 1.9267578125), (10486, 2.509765625), (20535, 7.6689453125), (30555, 10.654296875)] <class 'numpy.float64'> test_return_mean
+114514           [(290, 1.2776628848035736), (10486, 0.36830262023010285), (20535, 0.4034503422354508), (30555, 0.6424771957209722)] <class 'numpy.float64'> test_return_std
+[INFO 14:17:00] my_main Recent Stats | t_env:      40236 | Episode:     1904
+advantage_mean:            0.0008	agent_grad_norm:           0.0207	battle_won_mean:           0.0000	coma_loss:                -0.0110
+critic_grad_norm:          1.8073	critic_loss:               0.0688	dead_allies_mean:          7.9958	dead_enemies_mean:         0.6520
+ep_length_mean:           25.1470	epsilon:                   0.3511	pi_max:                    0.6570	q_taken_mean:              1.6568
+return_mean:               4.3070	return_std:                0.8872	target_mean:               1.6658	td_error_abs:              0.1589
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.5312	test_dead_enemies_mean:    2.7344	test_ep_length_mean:      49.9297
+test_return_mean:          5.6899	test_return_std:           0.6730	
+[INFO 14:17:02] my_main t_env: 40566 / 2050000
+[INFO 14:17:02] my_main Estimated time left: 3 hours, 39 minutes, 10 seconds. Time passed: 5 minutes, 1 seconds
+[INFO 14:17:15] my_main Updated target network

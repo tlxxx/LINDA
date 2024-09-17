@@ -1,0 +1,104 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/home/amax/lgh/LINDA/pymarl-master/src",
+    "dependencies": [
+      "numpy==1.24.4",
+      "PyYAML==3.13",
+      "sacred==0.8.6",
+      "torch==2.4.1"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_b7323ae4bfd95dceefc78ad124a4154e.py"
+      ],
+      [
+        "run.py",
+        "_sources/run_c3a9ca40c87ac2f0c25b8bb64d094943.py"
+      ],
+      [
+        "utils/logging.py",
+        "_sources/logging_17bd0d742d3652503a996eb43349da26.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/amax/anaconda3/envs/lgh_pymarl/lib/python3.8/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"src/main.py\", line 35, in my_main\n    run(_run, config, _log)\n",
+    "  File \"/home/amax/lgh/LINDA/pymarl-master/src/run.py\", line 48, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"/home/amax/lgh/LINDA/pymarl-master/src/run.py\", line 108, in run_sequential\n    mac = mac_REGISTRY[args.mac](buffer.scheme, groups, args)\n",
+    "  File \"/home/amax/lgh/LINDA/pymarl-master/src/controllers/basic_controller.py\", line 13, in __init__\n    self._build_agents(input_shape)\n",
+    "  File \"/home/amax/lgh/LINDA/pymarl-master/src/controllers/basic_controller.py\", line 77, in _build_agents\n    self.agent = agent_REGISTRY[self.args.agent](input_shape, self.args)\n",
+    "  File \"/home/amax/lgh/LINDA/pymarl-master/src/modules/agents/LINDA_agent.py\", line 19, in __init__\n    ReLU,\n",
+    "NameError: name 'ReLU' is not defined\n"
+  ],
+  "heartbeat": "2024-09-13T10:54:02.531399",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Xeon(R) Silver 4116 CPU @ 2.10GHz",
+    "gpus": {
+      "driver_version": "545.29.06",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce RTX 2080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11264
+        }
+      ]
+    },
+    "hostname": "pop-os",
+    "os": [
+      "Linux",
+      "Linux-6.6.6-76060606-generic-x86_64-with-glibc2.17"
+    ],
+    "python_version": "3.8.19"
+  },
+  "meta": {
+    "command": "my_main",
+    "config_updates": {
+      "env_args": {
+        "map_name": "8m"
+      }
+    },
+    "named_configs": [],
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--id": null,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "env_args.map_name=8m"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2024-09-13T10:54:02.321007",
+  "status": "FAILED",
+  "stop_time": "2024-09-13T10:54:02.533093"
+}

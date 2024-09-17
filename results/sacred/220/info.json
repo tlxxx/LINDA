@@ -1,0 +1,142 @@
+{
+  "battle_won_mean": [
+    0.0
+  ],
+  "battle_won_mean_T": [
+    60
+  ],
+  "dead_allies_mean": [
+    5.0
+  ],
+  "dead_allies_mean_T": [
+    60
+  ],
+  "dead_enemies_mean": [
+    0.0
+  ],
+  "dead_enemies_mean_T": [
+    60
+  ],
+  "ep_length_mean": [
+    60.0
+  ],
+  "ep_length_mean_T": [
+    60
+  ],
+  "episode": [
+    14,
+    29,
+    45,
+    60
+  ],
+  "episode_T": [
+    426,
+    833,
+    1236,
+    1648
+  ],
+  "epsilon": [
+    1.0
+  ],
+  "epsilon_T": [
+    60
+  ],
+  "grad_norm": [
+    {
+      "dtype": "float32",
+      "py/object": "numpy.ndarray",
+      "values": 0.8558390736579895
+    }
+  ],
+  "grad_norm_T": [
+    913
+  ],
+  "loss": [
+    0.12956850230693817
+  ],
+  "loss_T": [
+    913
+  ],
+  "q_taken_mean": [
+    -0.04590987574231586
+  ],
+  "q_taken_mean_T": [
+    913
+  ],
+  "return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 1.5849056603773586
+    }
+  ],
+  "return_mean_T": [
+    60
+  ],
+  "return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "return_std_T": [
+    60
+  ],
+  "target_mean": [
+    -0.023255206773471728
+  ],
+  "target_mean_T": [
+    913
+  ],
+  "td_error_abs": [
+    0.2866136732655052
+  ],
+  "td_error_abs_T": [
+    913
+  ],
+  "test_battle_won_mean": [
+    0.0
+  ],
+  "test_battle_won_mean_T": [
+    60
+  ],
+  "test_dead_allies_mean": [
+    4.9375
+  ],
+  "test_dead_allies_mean_T": [
+    60
+  ],
+  "test_dead_enemies_mean": [
+    0.0
+  ],
+  "test_dead_enemies_mean_T": [
+    60
+  ],
+  "test_ep_length_mean": [
+    29.4375
+  ],
+  "test_ep_length_mean_T": [
+    60
+  ],
+  "test_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 1.1745283018867925
+    }
+  ],
+  "test_return_mean_T": [
+    60
+  ],
+  "test_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.41377900520415406
+    }
+  ],
+  "test_return_std_T": [
+    60
+  ]
+}

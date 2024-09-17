@@ -1,0 +1,376 @@
+[INFO 00:28:28] pymarl Running command 'my_main'
+[INFO 00:28:28] pymarl Started run with ID "141"
+[DEBUG 00:28:28] pymarl Starting Heartbeat
+[DEBUG 00:28:28] my_main Started
+[INFO 00:28:28] my_main Experiment Parameters:
+[INFO 00:28:28] my_main 
+
+{   'Lambda': 0.001,
+    'action_selector': 'epsilon_greedy',
+    'agent': 'linda',
+    'agent_output_type': 'q',
+    'batch_size': 32,
+    'batch_size_run': 1,
+    'buffer_cpu_only': True,
+    'buffer_size': 5000,
+    'checkpoint_path': '',
+    'critic_lr': 0.0005,
+    'double_q': True,
+    'encoder_dim': 3,
+    'env': 'sc2',
+    'env_args': {   'continuing_episode': False,
+                    'debug': False,
+                    'difficulty': '7',
+                    'game_version': None,
+                    'heuristic_ai': False,
+                    'heuristic_rest': False,
+                    'map_name': '8m',
+                    'move_amount': 2,
+                    'obs_all_health': True,
+                    'obs_instead_of_state': False,
+                    'obs_last_action': False,
+                    'obs_own_health': True,
+                    'obs_pathing_grid': False,
+                    'obs_terrain_height': False,
+                    'obs_timestep_number': False,
+                    'replay_dir': '',
+                    'replay_prefix': '',
+                    'reward_death_value': 10,
+                    'reward_defeat': 0,
+                    'reward_negative_scale': 0.5,
+                    'reward_only_positive': True,
+                    'reward_scale': True,
+                    'reward_scale_rate': 20,
+                    'reward_sparse': False,
+                    'reward_win': 200,
+                    'seed': 687563701,
+                    'state_last_action': True,
+                    'state_timestep_number': False,
+                    'step_mul': 8},
+    'epsilon_anneal_time': 50000,
+    'epsilon_finish': 0.05,
+    'epsilon_start': 1.0,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hypernet_embed': 64,
+    'hypernet_layers': 2,
+    'label': 'default_label',
+    'learner': 'LINDA_learner',
+    'learner_log_interval': 10000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 10000,
+    'lr': 0.0005,
+    'mac': 'LINDA_mac',
+    'mixer': 'qmix',
+    'mixing_embed_dim': 32,
+    'name': 'LINDA_qmix',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'runner': 'episode',
+    'runner_log_interval': 10000,
+    'save_model': False,
+    'save_model_interval': 2000000,
+    'save_replay': False,
+    'seed': 687563701,
+    't_max': 2050000,
+    'target_update_interval': 200,
+    'tensorboard_log_interval': 400,
+    'test_greedy': True,
+    'test_interval': 10000,
+    'test_nepisode': 32,
+    'use_cuda': True,
+    'use_tensorboard': False}
+
+[INFO 00:28:30] my_main Beginning training for 2050000 timesteps
+[INFO 00:28:30] absl Launching SC2: /home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 39339 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-brzfdy00/
+[INFO 00:28:31] absl Connecting to: ws://127.0.0.1:39339/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home/amax/lgh/LINDA/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 39339 -dataDir /home/amax/lgh/LINDA/StarCraftII/ -tempDir /tmp/sc-brzfdy00/'
+Starting up...
+Startup Phase 1 complete
+[INFO 00:28:32] absl Connecting to: ws://127.0.0.1:39339/sc2api, attempt: 1, running: True
+Startup Phase 2 complete
+Creating stub renderer...
+Listening on: 127.0.0.1:39339
+Startup Phase 3 complete. Ready for commands.
+[INFO 00:28:33] absl Connecting to: ws://127.0.0.1:39339/sc2api, attempt: 2, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Game has started.
+Sending ResponseJoinGame
+/home/amax/lgh/LINDA/pymarl-master/src/components/episode_buffer.py:103: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:278.)
+  v = th.tensor(v, dtype=dtype, device=self.device)
+/home/amax/lgh/LINDA/pymarl-master/src/components/episode_buffer.py:103: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+[INFO 00:28:40] my_main t_env: 25 / 2050000
+[INFO 00:28:40] my_main Estimated time left: 32 minutes, 27 seconds. Time passed: 9 seconds
+[INFO 00:29:33] my_main Recent Stats | t_env:        424 | Episode:       13
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	return_mean:               1.8750	return_std:                0.0000	test_battle_won_mean:      0.0000
+test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688	test_return_mean:          1.5596
+test_return_std:           0.4662	
+[INFO 00:29:43] my_main Recent Stats | t_env:        835 | Episode:       27
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	return_mean:               1.8750	return_std:                0.0000	test_battle_won_mean:      0.0000
+test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688	test_return_mean:          1.5596
+test_return_std:           0.4662	
+/home/amax/anaconda3/envs/lgh_pymarl/lib/python3.8/site-packages/jsonpickle/ext/numpy.py:305: UserWarning: ndarray is defined by reference to an object we do not know how to serialize. A deep copy is serialized instead, breaking memory aliasing.
+  warnings.warn(msg)
+[INFO 00:29:56] my_main Recent Stats | t_env:       1239 | Episode:       39
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:30:13] my_main Recent Stats | t_env:       1663 | Episode:       52
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:30:30] my_main Recent Stats | t_env:       2081 | Episode:       64
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:30:47] my_main Recent Stats | t_env:       2500 | Episode:       78
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:31:04] my_main Recent Stats | t_env:       2905 | Episode:       92
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:31:19] my_main Recent Stats | t_env:       3313 | Episode:      104
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:31:36] my_main Recent Stats | t_env:       3727 | Episode:      117
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:31:53] my_main Recent Stats | t_env:       4150 | Episode:      131
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:32:09] my_main Recent Stats | t_env:       4553 | Episode:      142
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:32:25] my_main Recent Stats | t_env:       4966 | Episode:      156
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:32:42] my_main Recent Stats | t_env:       5403 | Episode:      169
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:32:56] my_main Recent Stats | t_env:       5816 | Episode:      178
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:33:13] my_main Recent Stats | t_env:       6233 | Episode:      190
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:33:29] my_main Updated target network
+[INFO 00:33:30] my_main Recent Stats | t_env:       6645 | Episode:      202
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:33:44] my_main Recent Stats | t_env:       7046 | Episode:      211
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:33:57] my_main Recent Stats | t_env:       7457 | Episode:      219
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:34:12] my_main Recent Stats | t_env:       7884 | Episode:      229
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:34:31] my_main Recent Stats | t_env:       8294 | Episode:      242
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:34:48] my_main Recent Stats | t_env:       8719 | Episode:      253
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:35:06] my_main Recent Stats | t_env:       9127 | Episode:      268
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:35:24] my_main Recent Stats | t_env:       9531 | Episode:      282
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:35:43] my_main Recent Stats | t_env:       9946 | Episode:      296
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0000	ep_length_mean:           25.0000
+epsilon:                   1.0000	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.8750	return_std:                0.0000	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0000	test_dead_allies_mean:     7.4062	test_dead_enemies_mean:    0.0312	test_ep_length_mean:      76.4688
+test_return_mean:          1.5596	test_return_std:           0.4662	
+[INFO 00:35:47] my_main t_env: 10033 / 2050000
+[INFO 00:35:47] my_main Estimated time left: 1 days, 12 minutes, 11 seconds. Time passed: 7 minutes, 16 seconds
+[INFO 00:36:22] my_main Recent Stats | t_env:      10366 | Episode:      311
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0017	ep_length_mean:           29.2919
+epsilon:                   0.8098	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.9644	return_std:                0.2651	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0156	test_dead_allies_mean:     7.6719	test_dead_enemies_mean:    1.4844	test_ep_length_mean:      50.0000
+test_return_mean:          5.1040	test_return_std:           1.5266	
+[INFO 00:36:41] my_main Recent Stats | t_env:      10770 | Episode:      326
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0017	ep_length_mean:           29.2919
+epsilon:                   0.8098	grad_norm:                 1.8866	loss:                      0.2523	q_taken_mean:              0.0148
+return_mean:               1.9644	return_std:                0.2651	target_mean:               0.0422	td_error_abs:              0.3896
+test_battle_won_mean:      0.0156	test_dead_allies_mean:     7.6719	test_dead_enemies_mean:    1.4844	test_ep_length_mean:      50.0000
+test_return_mean:          5.1040	test_return_std:           1.5266	
+[INFO 00:37:00] my_main Recent Stats | t_env:      11185 | Episode:      342
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0017	ep_length_mean:           29.2919
+epsilon:                   0.8098	grad_norm:               1816.0992	loss:                     12.5423	q_taken_mean:              0.0351
+return_mean:               1.9644	return_std:                0.2651	target_mean:               0.0371	td_error_abs:              0.3787
+test_battle_won_mean:      0.0156	test_dead_allies_mean:     7.6719	test_dead_enemies_mean:    1.4844	test_ep_length_mean:      50.0000
+test_return_mean:          5.1040	test_return_std:           1.5266	
+[INFO 00:37:19] my_main Recent Stats | t_env:      11589 | Episode:      357
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0017	ep_length_mean:           29.2919
+epsilon:                   0.8098	grad_norm:               1816.0992	loss:                     12.5423	q_taken_mean:              0.0351
+return_mean:               1.9644	return_std:                0.2651	target_mean:               0.0371	td_error_abs:              0.3787
+test_battle_won_mean:      0.0156	test_dead_allies_mean:     7.6719	test_dead_enemies_mean:    1.4844	test_ep_length_mean:      50.0000
+test_return_mean:          5.1040	test_return_std:           1.5266	
+[INFO 00:37:39] my_main Recent Stats | t_env:      11997 | Episode:      373
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0017	ep_length_mean:           29.2919
+epsilon:                   0.8098	grad_norm:               1816.0992	loss:                     12.5423	q_taken_mean:              0.0351
+return_mean:               1.9644	return_std:                0.2651	target_mean:               0.0371	td_error_abs:              0.3787
+test_battle_won_mean:      0.0156	test_dead_allies_mean:     7.6719	test_dead_enemies_mean:    1.4844	test_ep_length_mean:      50.0000
+test_return_mean:          5.1040	test_return_std:           1.5266	
+[INFO 00:38:00] my_main Recent Stats | t_env:      12405 | Episode:      387
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0017	ep_length_mean:           29.2919
+epsilon:                   0.8098	grad_norm:               1816.0992	loss:                     12.5423	q_taken_mean:              0.0351
+return_mean:               1.9644	return_std:                0.2651	target_mean:               0.0371	td_error_abs:              0.3787
+test_battle_won_mean:      0.0156	test_dead_allies_mean:     7.6719	test_dead_enemies_mean:    1.4844	test_ep_length_mean:      50.0000
+test_return_mean:          5.1040	test_return_std:           1.5266	
+[INFO 00:38:16] my_main Updated target network
+[INFO 00:38:19] my_main Recent Stats | t_env:      12829 | Episode:      403
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0017	ep_length_mean:           29.2919
+epsilon:                   0.8098	grad_norm:               1816.0992	loss:                     12.5423	q_taken_mean:              0.0351
+return_mean:               1.9644	return_std:                0.2651	target_mean:               0.0371	td_error_abs:              0.3787
+test_battle_won_mean:      0.0156	test_dead_allies_mean:     7.6719	test_dead_enemies_mean:    1.4844	test_ep_length_mean:      50.0000
+test_return_mean:          5.1040	test_return_std:           1.5266	
+[INFO 00:38:38] my_main Recent Stats | t_env:      13229 | Episode:      419
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0017	ep_length_mean:           29.2919
+epsilon:                   0.8098	grad_norm:               1816.0992	loss:                     12.5423	q_taken_mean:              0.0351
+return_mean:               1.9644	return_std:                0.2651	target_mean:               0.0371	td_error_abs:              0.3787
+test_battle_won_mean:      0.0156	test_dead_allies_mean:     7.6719	test_dead_enemies_mean:    1.4844	test_ep_length_mean:      50.0000
+test_return_mean:          5.1040	test_return_std:           1.5266	
+[INFO 00:38:58] my_main Recent Stats | t_env:      13644 | Episode:      436
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0017	ep_length_mean:           29.2919
+epsilon:                   0.8098	grad_norm:               1816.0992	loss:                     12.5423	q_taken_mean:              0.0351
+return_mean:               1.9644	return_std:                0.2651	target_mean:               0.0371	td_error_abs:              0.3787
+test_battle_won_mean:      0.0156	test_dead_allies_mean:     7.6719	test_dead_enemies_mean:    1.4844	test_ep_length_mean:      50.0000
+test_return_mean:          5.1040	test_return_std:           1.5266	
+[INFO 00:39:18] my_main Recent Stats | t_env:      14047 | Episode:      453
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0017	ep_length_mean:           29.2919
+epsilon:                   0.8098	grad_norm:               1816.0992	loss:                     12.5423	q_taken_mean:              0.0351
+return_mean:               1.9644	return_std:                0.2651	target_mean:               0.0371	td_error_abs:              0.3787
+test_battle_won_mean:      0.0156	test_dead_allies_mean:     7.6719	test_dead_enemies_mean:    1.4844	test_ep_length_mean:      50.0000
+test_return_mean:          5.1040	test_return_std:           1.5266	
+[INFO 00:39:38] my_main Recent Stats | t_env:      14454 | Episode:      470
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0017	ep_length_mean:           29.2919
+epsilon:                   0.8098	grad_norm:               1816.0992	loss:                     12.5423	q_taken_mean:              0.0351
+return_mean:               1.9644	return_std:                0.2651	target_mean:               0.0371	td_error_abs:              0.3787
+test_battle_won_mean:      0.0156	test_dead_allies_mean:     7.6719	test_dead_enemies_mean:    1.4844	test_ep_length_mean:      50.0000
+test_return_mean:          5.1040	test_return_std:           1.5266	
+[INFO 00:39:56] my_main Recent Stats | t_env:      14867 | Episode:      486
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0017	ep_length_mean:           29.2919
+epsilon:                   0.8098	grad_norm:               1816.0992	loss:                     12.5423	q_taken_mean:              0.0351
+return_mean:               1.9644	return_std:                0.2651	target_mean:               0.0371	td_error_abs:              0.3787
+test_battle_won_mean:      0.0156	test_dead_allies_mean:     7.6719	test_dead_enemies_mean:    1.4844	test_ep_length_mean:      50.0000
+test_return_mean:          5.1040	test_return_std:           1.5266	
+[INFO 00:40:14] my_main Recent Stats | t_env:      15269 | Episode:      503
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0017	ep_length_mean:           29.2919
+epsilon:                   0.8098	grad_norm:               1816.0992	loss:                     12.5423	q_taken_mean:              0.0351
+return_mean:               1.9644	return_std:                0.2651	target_mean:               0.0371	td_error_abs:              0.3787
+test_battle_won_mean:      0.0156	test_dead_allies_mean:     7.6719	test_dead_enemies_mean:    1.4844	test_ep_length_mean:      50.0000
+test_return_mean:          5.1040	test_return_std:           1.5266	
+[INFO 00:40:34] my_main Recent Stats | t_env:      15677 | Episode:      520
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0017	ep_length_mean:           29.2919
+epsilon:                   0.8098	grad_norm:               1816.0992	loss:                     12.5423	q_taken_mean:              0.0351
+return_mean:               1.9644	return_std:                0.2651	target_mean:               0.0371	td_error_abs:              0.3787
+test_battle_won_mean:      0.0156	test_dead_allies_mean:     7.6719	test_dead_enemies_mean:    1.4844	test_ep_length_mean:      50.0000
+test_return_mean:          5.1040	test_return_std:           1.5266	
+[INFO 00:40:52] my_main Recent Stats | t_env:      16080 | Episode:      537
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0017	ep_length_mean:           29.2919
+epsilon:                   0.8098	grad_norm:               1816.0992	loss:                     12.5423	q_taken_mean:              0.0351
+return_mean:               1.9644	return_std:                0.2651	target_mean:               0.0371	td_error_abs:              0.3787
+test_battle_won_mean:      0.0156	test_dead_allies_mean:     7.6719	test_dead_enemies_mean:    1.4844	test_ep_length_mean:      50.0000
+test_return_mean:          5.1040	test_return_std:           1.5266	
+[INFO 00:41:11] my_main Recent Stats | t_env:      16499 | Episode:      554
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0017	ep_length_mean:           29.2919
+epsilon:                   0.8098	grad_norm:               1816.0992	loss:                     12.5423	q_taken_mean:              0.0351
+return_mean:               1.9644	return_std:                0.2651	target_mean:               0.0371	td_error_abs:              0.3787
+test_battle_won_mean:      0.0156	test_dead_allies_mean:     7.6719	test_dead_enemies_mean:    1.4844	test_ep_length_mean:      50.0000
+test_return_mean:          5.1040	test_return_std:           1.5266	
+[INFO 00:41:30] my_main Recent Stats | t_env:      16916 | Episode:      571
+battle_won_mean:           0.0000	dead_allies_mean:          8.0000	dead_enemies_mean:         0.0017	ep_length_mean:           29.2919
+epsilon:                   0.8098	grad_norm:               1816.0992	loss:                     12.5423	q_taken_mean:              0.0351
+return_mean:               1.9644	return_std:                0.2651	target_mean:               0.0371	td_error_abs:              0.3787
+test_battle_won_mean:      0.0156	test_dead_allies_mean:     7.6719	test_dead_enemies_mean:    1.4844	test_ep_length_mean:      50.0000
+test_return_mean:          5.1040	test_return_std:           1.5266	

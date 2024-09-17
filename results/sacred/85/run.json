@@ -1,0 +1,104 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/home/amax/lgh/LINDA/pymarl-master/src",
+    "dependencies": [
+      "numpy==1.24.4",
+      "PyYAML==3.13",
+      "sacred==0.8.6",
+      "torch==2.4.1"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_b7323ae4bfd95dceefc78ad124a4154e.py"
+      ],
+      [
+        "run.py",
+        "_sources/run_c3a9ca40c87ac2f0c25b8bb64d094943.py"
+      ],
+      [
+        "utils/logging.py",
+        "_sources/logging_17bd0d742d3652503a996eb43349da26.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/amax/anaconda3/envs/lgh_pymarl/lib/python3.8/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"src/main.py\", line 35, in my_main\n    run(_run, config, _log)\n",
+    "  File \"/home/amax/lgh/LINDA/pymarl-master/src/run.py\", line 48, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"/home/amax/lgh/LINDA/pymarl-master/src/run.py\", line 166, in run_sequential\n    episode_batch = runner.run(test_mode=False)\n",
+    "  File \"/home/amax/lgh/LINDA/pymarl-master/src/runners/episode_runner.py\", line 67, in run\n    actions = self.mac.select_actions(self.batch, t_ep=self.t, t_env=self.t_env, test_mode=test_mode)\n",
+    "  File \"/home/amax/lgh/LINDA/pymarl-master/src/controllers/LINDA_controller.py\", line 23, in select_actions\n    agent_outputs = self.forward(ep_batch, t_ep, test_mode=test_mode)\n",
+    "  File \"/home/amax/lgh/LINDA/pymarl-master/src/controllers/LINDA_controller.py\", line 57, in forward\n    return agent_outs.view(ep_batch.batch_size, self.n_agents, -1), KL.view(ep_batch.batch_size, self.n_agents, -1)\n",
+    "RuntimeError: shape '[1, 8, -1]' is invalid for input of size 1\n"
+  ],
+  "heartbeat": "2024-09-13T11:45:59.661942",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Xeon(R) Silver 4116 CPU @ 2.10GHz",
+    "gpus": {
+      "driver_version": "545.29.06",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce RTX 2080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11264
+        }
+      ]
+    },
+    "hostname": "pop-os",
+    "os": [
+      "Linux",
+      "Linux-6.6.6-76060606-generic-x86_64-with-glibc2.17"
+    ],
+    "python_version": "3.8.19"
+  },
+  "meta": {
+    "command": "my_main",
+    "config_updates": {
+      "env_args": {
+        "map_name": "8m"
+      }
+    },
+    "named_configs": [],
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--id": null,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "env_args.map_name=8m"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2024-09-13T11:45:47.126474",
+  "status": "FAILED",
+  "stop_time": "2024-09-13T11:45:59.665509"
+}

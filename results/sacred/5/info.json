@@ -1,0 +1,221 @@
+{
+  "battle_won_mean": [
+    0.0,
+    0.0
+  ],
+  "battle_won_mean_T": [
+    46,
+    10059
+  ],
+  "dead_allies_mean": [
+    5.0,
+    4.98974358974359
+  ],
+  "dead_allies_mean_T": [
+    46,
+    10059
+  ],
+  "dead_enemies_mean": [
+    0.0,
+    0.05641025641025641
+  ],
+  "dead_enemies_mean_T": [
+    46,
+    10059
+  ],
+  "ep_length_mean": [
+    46.0,
+    51.34871794871795
+  ],
+  "ep_length_mean_T": [
+    46,
+    10059
+  ],
+  "episode": [
+    196
+  ],
+  "episode_T": [
+    10059
+  ],
+  "epsilon": [
+    1.0,
+    0.810152
+  ],
+  "epsilon_T": [
+    46,
+    10059
+  ],
+  "grad_norm": [
+    {
+      "py/reduce": [
+        {
+          "py/function": "torch._utils._rebuild_tensor_v2"
+        },
+        {
+          "py/tuple": [
+            {
+              "py/reduce": [
+                {
+                  "py/function": "torch.storage._load_from_bytes"
+                },
+                {
+                  "py/tuple": [
+                    {
+                      "py/b64": "gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAAAGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAAaW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3JhZ2UKcQFYCQAAADM3NjgyMDQxNnECWAYAAABjdWRhOjBxA0sBTnRxBFEugAJdcQBYCQAAADM3NjgyMDQxNnEBYS4BAAAAAAAAANocuD8="
+                    }
+                  ]
+                }
+              ]
+            },
+            0,
+            {
+              "py/tuple": []
+            },
+            {
+              "py/tuple": []
+            },
+            false,
+            {
+              "py/reduce": [
+                {
+                  "py/type": "collections.OrderedDict"
+                },
+                {
+                  "py/tuple": []
+                },
+                null,
+                null,
+                {
+                  "py/tuple": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "grad_norm_T": [
+    1616
+  ],
+  "loss": [
+    0.07303885370492935
+  ],
+  "loss_T": [
+    1616
+  ],
+  "q_taken_mean": [
+    -0.010769629714512589
+  ],
+  "q_taken_mean_T": [
+    1616
+  ],
+  "return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 4.568627450980392
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 4.400741578682754
+    }
+  ],
+  "return_mean_T": [
+    46,
+    10059
+  ],
+  "return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 1.0279312048630709
+    }
+  ],
+  "return_std_T": [
+    46,
+    10059
+  ],
+  "target_mean": [
+    0.024764935332949798
+  ],
+  "target_mean_T": [
+    1616
+  ],
+  "td_error_abs": [
+    0.2037324622125909
+  ],
+  "td_error_abs_T": [
+    1616
+  ],
+  "test_battle_won_mean": [
+    0.0,
+    0.0
+  ],
+  "test_battle_won_mean_T": [
+    46,
+    10059
+  ],
+  "test_dead_allies_mean": [
+    3.53125,
+    4.75
+  ],
+  "test_dead_allies_mean_T": [
+    46,
+    10059
+  ],
+  "test_dead_enemies_mean": [
+    0.59375,
+    1.09375
+  ],
+  "test_dead_enemies_mean_T": [
+    46,
+    10059
+  ],
+  "test_ep_length_mean": [
+    111.34375,
+    82.4375
+  ],
+  "test_ep_length_mean_T": [
+    46,
+    10059
+  ],
+  "test_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 6.807827818627445
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 6.482077205882351
+    }
+  ],
+  "test_return_mean_T": [
+    46,
+    10059
+  ],
+  "test_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 2.0792642336667457
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 1.428735714723129
+    }
+  ],
+  "test_return_std_T": [
+    46,
+    10059
+  ]
+}

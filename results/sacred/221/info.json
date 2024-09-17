@@ -1,0 +1,250 @@
+{
+  "battle_won_mean": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "battle_won_mean_T": [
+    32,
+    10043,
+    20052
+  ],
+  "dead_allies_mean": [
+    5.0,
+    4.989583333333333,
+    4.991786447638604
+  ],
+  "dead_allies_mean_T": [
+    32,
+    10043,
+    20052
+  ],
+  "dead_enemies_mean": [
+    0.0,
+    0.0,
+    0.01642710472279261
+  ],
+  "dead_enemies_mean_T": [
+    32,
+    10043,
+    20052
+  ],
+  "ep_length_mean": [
+    32.0,
+    26.0703125,
+    20.5523613963039
+  ],
+  "ep_length_mean_T": [
+    32,
+    10043,
+    20052
+  ],
+  "episode": [
+    383,
+    870
+  ],
+  "episode_T": [
+    10001,
+    20015
+  ],
+  "epsilon": [
+    1.0,
+    0.809563,
+    0.6193540000000001
+  ],
+  "epsilon_T": [
+    32,
+    10043,
+    20052
+  ],
+  "grad_norm": [
+    {
+      "dtype": "float32",
+      "py/object": "numpy.ndarray",
+      "values": 0.6375899910926819
+    },
+    {
+      "dtype": "float32",
+      "py/object": "numpy.ndarray",
+      "values": 0.42119064927101135
+    },
+    {
+      "dtype": "float32",
+      "py/object": "numpy.ndarray",
+      "values": 0.21598294377326965
+    }
+  ],
+  "grad_norm_T": [
+    934,
+    10941,
+    20947
+  ],
+  "loss": [
+    0.07949238270521164,
+    0.0196868646889925,
+    0.012336879037320614
+  ],
+  "loss_T": [
+    934,
+    10941,
+    20947
+  ],
+  "q_taken_mean": [
+    -0.00885566695088748,
+    0.05703405702389315,
+    0.16132305793042453
+  ],
+  "q_taken_mean_T": [
+    934,
+    10941,
+    20947
+  ],
+  "return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.679245283018868
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 1.5483490566037739
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 2.2484987021037535
+    }
+  ],
+  "return_mean_T": [
+    32,
+    10043,
+    20052
+  ],
+  "return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.48389737832345087
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.6627165432788554
+    }
+  ],
+  "return_std_T": [
+    32,
+    10043,
+    20052
+  ],
+  "target_mean": [
+    0.012892002211903607,
+    0.07212471759188943,
+    0.15579291961477987
+  ],
+  "target_mean_T": [
+    934,
+    10941,
+    20947
+  ],
+  "td_error_abs": [
+    0.2206842557265876,
+    0.10398336343313336,
+    0.08234130091637186
+  ],
+  "td_error_abs_T": [
+    934,
+    10941,
+    20947
+  ],
+  "test_battle_won_mean": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "test_battle_won_mean_T": [
+    32,
+    10043,
+    20052
+  ],
+  "test_dead_allies_mean": [
+    3.90625,
+    5.0,
+    5.0
+  ],
+  "test_dead_allies_mean_T": [
+    32,
+    10043,
+    20052
+  ],
+  "test_dead_enemies_mean": [
+    0.0,
+    0.5,
+    1.71875
+  ],
+  "test_dead_enemies_mean_T": [
+    32,
+    10043,
+    20052
+  ],
+  "test_ep_length_mean": [
+    63.03125,
+    17.75,
+    18.0
+  ],
+  "test_ep_length_mean_T": [
+    32,
+    10043,
+    20052
+  ],
+  "test_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 1.1886792452830188
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 4.525943396226415
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 6.574292452830188
+    }
+  ],
+  "test_return_mean_T": [
+    32,
+    10043,
+    20052
+  ],
+  "test_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.41978482002428275
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.8657138324286157
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.6850339278379364
+    }
+  ],
+  "test_return_std_T": [
+    32,
+    10043,
+    20052
+  ]
+}

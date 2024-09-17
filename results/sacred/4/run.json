@@ -1,0 +1,106 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/home/amax/lgh/LINDA/pymarl-master/src",
+    "dependencies": [
+      "numpy==1.24.4",
+      "PyYAML==3.13",
+      "sacred==0.8.6",
+      "torch==2.4.1"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_b7323ae4bfd95dceefc78ad124a4154e.py"
+      ],
+      [
+        "run.py",
+        "_sources/run_7911ddab0b7ff30dd1480a75183ffc39.py"
+      ],
+      [
+        "utils/logging.py",
+        "_sources/logging_aa14e56e60b01dd7a9ddb8e6cdf36b85.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/amax/anaconda3/envs/lgh_pymarl/lib/python3.8/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"src/main.py\", line 35, in my_main\n    run(_run, config, _log)\n",
+    "  File \"/home/amax/lgh/LINDA/pymarl-master/src/run.py\", line 48, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"/home/amax/lgh/LINDA/pymarl-master/src/run.py\", line 209, in run_sequential\n    logger.print_recent_stats()\n",
+    "  File \"/home/amax/lgh/LINDA/pymarl-master/src/utils/logging.py\", line 48, in print_recent_stats\n    item = \"{:.4f}\".format(np.mean([x[1] for x in self.stats[k][-window:]]))\n",
+    "  File \"<__array_function__ internals>\", line 200, in mean\n",
+    "  File \"/home/amax/.local/lib/python3.8/site-packages/numpy/core/fromnumeric.py\", line 3464, in mean\n    return _methods._mean(a, axis=axis, dtype=dtype,\n",
+    "  File \"/home/amax/.local/lib/python3.8/site-packages/numpy/core/_methods.py\", line 165, in _mean\n    arr = asanyarray(a)\n",
+    "  File \"/home/amax/anaconda3/envs/lgh_pymarl/lib/python3.8/site-packages/torch/_tensor.py\", line 1083, in __array__\n    return self.numpy()\n",
+    "TypeError: can't convert cuda:0 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.\n"
+  ],
+  "heartbeat": "2024-09-10T11:44:08.111452",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Xeon(R) Silver 4116 CPU @ 2.10GHz",
+    "gpus": {
+      "driver_version": "545.29.06",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce RTX 2080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11264
+        }
+      ]
+    },
+    "hostname": "pop-os",
+    "os": [
+      "Linux",
+      "Linux-6.6.6-76060606-generic-x86_64-with-glibc2.17"
+    ],
+    "python_version": "3.8.19"
+  },
+  "meta": {
+    "command": "my_main",
+    "config_updates": {
+      "env_args": {
+        "map_name": "2s3z"
+      }
+    },
+    "named_configs": [],
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--id": null,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "env_args.map_name=2s3z"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2024-09-10T11:39:46.807613",
+  "status": "FAILED",
+  "stop_time": "2024-09-10T11:44:08.118985"
+}

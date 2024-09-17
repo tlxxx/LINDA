@@ -1,0 +1,264 @@
+{
+  "battle_won_mean": [
+    0.0,
+    0.0
+  ],
+  "battle_won_mean_T": [
+    28,
+    10036
+  ],
+  "dead_allies_mean": [
+    8.0,
+    7.996742671009772
+  ],
+  "dead_allies_mean_T": [
+    28,
+    10036
+  ],
+  "dead_enemies_mean": [
+    0.0,
+    0.006514657980456026
+  ],
+  "dead_enemies_mean_T": [
+    28,
+    10036
+  ],
+  "ep_length_mean": [
+    28.0,
+    32.59934853420195
+  ],
+  "ep_length_mean_T": [
+    28,
+    10036
+  ],
+  "episode": [
+    11,
+    25,
+    38,
+    52,
+    66,
+    75,
+    86,
+    99,
+    111,
+    124,
+    136,
+    148,
+    161,
+    173,
+    186,
+    201,
+    212,
+    227,
+    242,
+    256,
+    270,
+    281,
+    294,
+    306,
+    321,
+    336,
+    351,
+    364,
+    379,
+    395,
+    411,
+    427,
+    442,
+    457,
+    473,
+    489,
+    505
+  ],
+  "episode_T": [
+    406,
+    826,
+    1269,
+    1683,
+    2088,
+    2510,
+    2945,
+    3353,
+    3771,
+    4190,
+    4592,
+    5002,
+    5416,
+    5821,
+    6223,
+    6652,
+    7059,
+    7469,
+    7874,
+    8299,
+    8715,
+    9127,
+    9536,
+    9981,
+    10390,
+    10810,
+    11212,
+    11634,
+    12035,
+    12455,
+    12858,
+    13279,
+    13701,
+    14119,
+    14521,
+    14929,
+    15333
+  ],
+  "epsilon": [
+    1.0,
+    0.809867
+  ],
+  "epsilon_T": [
+    28,
+    10036
+  ],
+  "grad_norm": [
+    {
+      "dtype": "float32",
+      "py/object": "numpy.ndarray",
+      "values": 1.4192390441894531
+    },
+    {
+      "dtype": "float32",
+      "py/object": "numpy.ndarray",
+      "values": 3323.12646484375
+    }
+  ],
+  "grad_norm_T": [
+    1065,
+    11069
+  ],
+  "loss": [
+    0.22281916439533234,
+    30.06367301940918
+  ],
+  "loss_T": [
+    1065,
+    11069
+  ],
+  "q_taken_mean": [
+    0.032970564578060815,
+    0.14026114126822134
+  ],
+  "q_taken_mean_T": [
+    1065,
+    11069
+  ],
+  "return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 2.0625
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 2.13049674267101
+    }
+  ],
+  "return_mean_T": [
+    28,
+    10036
+  ],
+  "return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.5685425245204503
+    }
+  ],
+  "return_std_T": [
+    28,
+    10036
+  ],
+  "target_mean": [
+    0.06268320576126027,
+    0.11255882499931572
+  ],
+  "target_mean_T": [
+    1065,
+    11069
+  ],
+  "td_error_abs": [
+    0.373944980101966,
+    0.8859031150290916
+  ],
+  "td_error_abs_T": [
+    1065,
+    11069
+  ],
+  "test_battle_won_mean": [
+    0.0,
+    0.03125
+  ],
+  "test_battle_won_mean_T": [
+    28,
+    10036
+  ],
+  "test_dead_allies_mean": [
+    7.9375,
+    7.90625
+  ],
+  "test_dead_allies_mean_T": [
+    28,
+    10036
+  ],
+  "test_dead_enemies_mean": [
+    0.0,
+    3.28125
+  ],
+  "test_dead_enemies_mean_T": [
+    28,
+    10036
+  ],
+  "test_ep_length_mean": [
+    38.5,
+    23.0625
+  ],
+  "test_ep_length_mean_T": [
+    28,
+    10036
+  ],
+  "test_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 1.529296875
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 8.9873046875
+    }
+  ],
+  "test_return_mean_T": [
+    28,
+    10036
+  ],
+  "test_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.5158579906841944
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 2.391376252657641
+    }
+  ],
+  "test_return_std_T": [
+    28,
+    10036
+  ]
+}
